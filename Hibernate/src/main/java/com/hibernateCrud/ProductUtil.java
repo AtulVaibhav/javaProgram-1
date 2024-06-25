@@ -47,7 +47,7 @@ public class ProductUtil {
 			session.close();
 			return "Product updated successfully";
 			
-		}
+  		}
 		session.close();
 		return "No product found";
 	}

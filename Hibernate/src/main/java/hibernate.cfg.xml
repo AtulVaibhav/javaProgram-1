@@ -12,9 +12,13 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
         <property name="hbm2ddl.auto">update</property>
         
-        <!--  <mapping class="in.advjava.Hibernate.Product"/>  -->
+        <!--  <mapping class="in.advjava.Hibernate.Product"/>
         
-        <mapping class="com.hibernateCrud.Product"/>
+        <mapping class="com.hibernateCrud.Product"/> 
+        
+        <mapping class="com.association.Employee"/> -->
+        <mapping class="com.onetoone.Employee"/>
+         <mapping class="com.onetoone.Account"/>
         
         
         
