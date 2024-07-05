@@ -11,14 +11,25 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
         <property name="hbm2ddl.auto">update</property>
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        
         
         <!--  <mapping class="in.advjava.Hibernate.Product"/>
         
         <mapping class="com.hibernateCrud.Product"/> 
         
-        <mapping class="com.association.Employee"/> -->
+        <mapping class="com.association.Employee"/> 
         <mapping class="com.onetoone.Employee"/>
          <mapping class="com.onetoone.Account"/>
+         <mapping class="com.onetomany.Category"/>
+         <mapping class="com.onetomany.Product"/>
+         <mapping class="com.manytomany.Employee"/>
+         <mapping class="com.manytomany.Project"/>
+         
+         <mapping class="com.caching.Vehicle"/>-->
+         
+         <mapping class="com.hql.Product"/>
         
         
         

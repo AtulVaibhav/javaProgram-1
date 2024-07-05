@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    default-lazy-init="true" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <!--   <bean id="airtel" class="in.advjava.SpringCore.Airtel"/>
+    <bean id="jio" class="in.advjava.SpringCore.JIO"/>
+    <bean id="idea" class="in.advjava.SpringCore.Idea"/>
+    
+    <bean id="network" class="in.advjava.SpringCore.Network">
+     <constructor-arg  ref="idea"/>
+    </bean>-->
+    
+    <!-- constructor-injection: Primitive & String -->
+   <!--   <bean id="emp" class="com.constructorInjection_I.Employee">
+    <constructor-arg value="101"/>
+    <constructor-arg value="Harsh"/>
+    </bean>-->
+    
+    <!-- constructor-injection: Reference -->
+    
+   <!--   <bean id="addr" class="com.constructorInjection_II.Address">
+      <constructor-arg value="Bangalore"/>
+      <constructor-arg value="Karnataka"/>
+    </bean>
+    
+    <bean id="emp" class="com.constructorInjection_II.Employee">
+    <constructor-arg value="101"/>
+    <constructor-arg value="Harsh"/>
+    <constructor-arg ref="addr"/>
+    </bean>-->
+    
+    <!-- constructor-injection: Collection<Primitive & String> -->
+    
+   <!--   <bean id="emp" class="com.constructorInjection_III.Employee">
+    <constructor-arg value="101"/>
+    <constructor-arg value="Harsh"/>
+    <constructor-arg>
+      <list>
+         <value>Project1</value>
+         <value>Project2</value>
+      </list>
+    </constructor-arg>
+    </bean>-->
+    
+    <!-- constructor-injection: Collection<Reference> -->
+   <!--  <bean id="addr" class="com.constructorInjection_IV.Address">
+      <constructor-arg value="Bangalore"/>
+      <constructor-arg value="Karnataka"/>
+    </bean>
+    
+    <bean id="addr2" class="com.constructorInjection_IV.Address">
+      <constructor-arg value="Indore"/>
+      <constructor-arg value="MP"/>
+    </bean>
+    <bean id="emp" class="com.constructorInjection_IV.Employee">
+    <constructor-arg value="101"/>
+    <constructor-arg value="Harsh"/>
+    <constructor-arg>
+       <set>
+         <ref bean="addr"/>
+         <ref bean="addr2"/>
+       </set>
+    
+    </constructor-arg>
+    </bean> -->
+    
+    <!-- Setter Injection: Primitive and String -->
+  <!--   <bean id="product" class="com.setterInjection_I.Product">
+     <property name="productId" value="101"/>
+     <property name="productName" value="Mobiles"/>
+    </bean>--> 
+    
+    <!-- Setter Injection: Reference type -->
+  <!--    <bean id="user" class="com.setterInjection_II.User">
+    <property name="userId" value="101"/>
+    <property name="username" value="Harsh"/>
+    </bean>
+    
+    <bean id="product" class="com.setterInjection_II.Product">
+     <property name="productId" value="200"/>
+     <property name="productName" value="Laptop"/>
+     <property name="user" ref="user"/>
+    </bean>-->
+    
+    <!-- Bean Scope -->
+   <!--   <bean id="car" class="com.beanScope.Car" scope="prototype"/>-->
+  <!--  <bean id="car" class="com.beanLifeCycle.Car" >
+    <property name="name" value="Lamborgini"/>
+   </bean> -->
+   
+   
+   <!-- Autowiring -->
+   
+   <bean id="bank2" class="com.autowiring.Bank">
+   <property name="bankAccount" value="SBI123"/>
+   <property name="bankName" value="SBI"/>
+   </bean>
+   
+   <bean id="customer" class="com.autowiring.Customer" autowire="byType">
+     <property name="customerName"  value="Harsh"/>
+   </bean>
+   
+   
+   
+    
+    
+    
+    
+    
+
+</beans>
